@@ -23,7 +23,7 @@ Content-Length: 35
 #### Query to obtain opening value:
 
 ```
-https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22%5ENDX%22%2C%22INDU%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
+curl "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NDX&apikey=$key"
 ```
 
 *Due to Yahoo/Dow Jones Index restrictions you can no longer get DOW opening this way. Instead use ^NDX* (NASDAQ-100)
